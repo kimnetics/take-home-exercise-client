@@ -12,7 +12,7 @@ The client implements the Filter (B) and Sort (C) requirements.
 
 ### Start Server
 
-Run a terminal application and use the following commands to install and start the server:
+#### Run a terminal application and use the following commands to install and start the server:
 
 ```shell
 git clone https://github.com/kimnetics/take-home-exercise-server
@@ -34,7 +34,7 @@ You can optionally enter a New Relic license key in the `license_key` field in t
 
 ### Start Client
 
-Run a terminal application and use the following commands to install and start the client:
+#### Run a terminal application and use the following commands to install and start the client:
 
 ```shell
 git clone https://github.com/kimnetics/take-home-exercise-client
@@ -49,6 +49,6 @@ The above commands do the following:
 * Install needed packages.
 * Start the server.
 
-Run a browser application and browse to `http://localhost:3000/customers`.
+#### Run a browser application and browse to `http://localhost:3000/customers`.
 
 The client listens on port 3000.
