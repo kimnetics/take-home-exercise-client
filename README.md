@@ -49,6 +49,6 @@ The above commands do the following:
 * Install needed packages.
 * Start the server.
 
-#### Run a browser application and browse to `http://localhost:3000/customers`.
-
 The client listens on port 3000.
+
+#### Run a browser application and browse to `http://localhost:3000/customers`.
