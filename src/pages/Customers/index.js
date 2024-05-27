@@ -8,7 +8,10 @@ import CustomerSort from './CustomerSort'
 import * as common from '../../common'
 
 export default function Customers () {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams({
+    filter: common.FILTER_ALL_COMPANIES,
+    sort: common.SORT_FIRST_NAME_DESC_CODE
+  })
 
   let defaultFilter = common.FILTER_ALL_COMPANIES
   const filter = searchParams.get('filter')
