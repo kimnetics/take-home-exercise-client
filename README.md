@@ -1,6 +1,8 @@
 # Take Home Exercise Client
 
 An example of a take home exercise client solution.
+</br>
+<img src="screenshot.png">
 
 ## About
 
