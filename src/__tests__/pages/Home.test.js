@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
-import App from '../App'
+import Home from '../../pages/Home'
 
 test('renders home page', () => {
-  render(<App/>)
+  render(<Home/>)
   expect(screen.getByText(/Take Home Exercise Client/i)).toBeInTheDocument()
 })

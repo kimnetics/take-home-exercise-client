@@ -55,8 +55,6 @@ The above commands do the following:
 
 The client listens on port 3000.
 
-##### Run a browser application and browse to `http://localhost:3000/customers`
-
 ### Testing
 
 After the client is installed, run the unit tests with the following command:
