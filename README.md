@@ -10,9 +10,13 @@ The client implements the Filter (B) and Sort (C) requirements.
 
 ## Usage
 
-### Start Server
+### Running
 
-#### Run a terminal application and use the following commands to install and start the server:
+The following sections describe how to set up and run the server and client services used by the client application.
+
+#### Start Server
+
+##### Run a terminal application and use the following commands to install and start the server:
 
 ```shell
 git clone https://github.com/kimnetics/take-home-exercise-server
@@ -32,9 +36,9 @@ The server listens on port 4000.
 
 You can optionally enter a New Relic license key in the `license_key` field in the `newrelic.cjs` file if you would like to monitor the server with New Relic. The server shows in the New Relic APM section as `take-home-exercise-server`.
 
-### Start Client
+#### Start Client
 
-#### Run a terminal application and use the following commands to install and start the client:
+##### Run a terminal application and use the following commands to install and start the client:
 
 ```shell
 git clone https://github.com/kimnetics/take-home-exercise-client
@@ -51,4 +55,12 @@ The above commands do the following:
 
 The client listens on port 3000.
 
-#### Run a browser application and browse to `http://localhost:3000/customers`
+##### Run a browser application and browse to `http://localhost:3000/customers`
+
+### Testing
+
+After the client is installed, run the unit tests with the following command:
+
+```shell
+npm test
+```
