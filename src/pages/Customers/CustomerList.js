@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-
-import Container from '@mui/material/Container'
 import Paper from '@mui/material/Paper'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -58,27 +56,25 @@ export default function CustomerList ({ companyNameFilter, customerSort }) {
   }, [requestUrl])
 
   return (
-    <Container>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>First Name</TableCell>
-              <TableCell>Last Name</TableCell>
-              <TableCell>Company Name</TableCell>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>First Name</TableCell>
+            <TableCell>Last Name</TableCell>
+            <TableCell>Company Name</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {customers.map((customer) => (
+            <TableRow key={customer.firstName + '~' + customer.lastName}>
+              <TableCell>{customer.firstName}</TableCell>
+              <TableCell>{customer.lastName}</TableCell>
+              <TableCell>{customer.companyName}</TableCell>
             </TableRow>
-          </TableHead>
-          <TableBody>
-            {customers.map((customer) => (
-              <TableRow key={customer.firstName + '~' + customer.lastName}>
-                <TableCell>{customer.firstName}</TableCell>
-                <TableCell>{customer.lastName}</TableCell>
-                <TableCell>{customer.companyName}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Container>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Autocomplete from '@mui/material/Autocomplete'
+import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
 
 import * as common from '../../common'
@@ -23,20 +24,21 @@ export default function CompanyNameFilter ({ companyNameFilter, setCompanyNameFi
 
   return (
     <>
-      <Autocomplete
-        options={companyNames}
-        style={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} variant="outlined"/>}
-        value={companyNameFilter}
-        onChange={(event, newValue) => {
-          if (newValue) {
-            setCompanyNameFilter(newValue)
-            const sort = searchParams.get('sort').toLowerCase()
-            setSearchParams({ filter: newValue, sort: sort })
-          }
-        }}
-        disableClearable
-      />
+      <Paper>
+        <Autocomplete
+          options={companyNames}
+          renderInput={(params) => <TextField {...params} />}
+          value={companyNameFilter}
+          onChange={(event, newValue) => {
+            if (newValue) {
+              setCompanyNameFilter(newValue)
+              const sort = searchParams.get('sort').toLowerCase()
+              setSearchParams({ filter: newValue, sort: sort })
+            }
+          }}
+          disableClearable
+        />
+      </Paper>
     </>
   )
 }
